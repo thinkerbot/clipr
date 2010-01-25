@@ -1,0 +1,5 @@
+.DS_Store
+src/*.o
+src/clips.bundle
+src/Makefile
+ffi
