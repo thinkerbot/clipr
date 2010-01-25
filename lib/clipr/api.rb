@@ -18,11 +18,11 @@ module Clipr
   # subset of the methods have been attached and the rest are left as stubs.
   # Stub methods are being attached as-needed by the Clipr project.
   #
-  # Attaching a method consists of looking up the method signature in the apg
+  # Attaching a method consists of looking up the method signature in the code
   # and translating it into the corresponding FFI signature (ex char => :char,
   # *type => :pointer).  There are, however, several details to be aware of.
   # Developers are encouraged to pay close attention this documentation, the
-  # FFI documentation, and the apg when attaching new methods.
+  # FFI documentation, the apg, and the CLIPS code when attaching new methods.
   #
   # === Companion Functions
   #
@@ -85,6 +85,18 @@ module Clipr
   #
   # Numerous examples and variations of this method can be found by digging
   # around in the code.
+  #
+  # === Helpful Hints
+  #
+  # I have found several minor errors in the apg method signatures that can
+  # cause big errors with FFI.  For instance the functionType in
+  # DefineFunction2 is listed as a char rather than an int (as of 2010-01-25).
+  # This caused a confusing bug (http://github.com/ffi/ffi/issues#issue/26)
+  # which could have been avoided by examining the signatures in the source
+  # code itself.
+  #
+  # Lesson: get method signatures from the code and not the documentation
+  #
   module Api
     extend FFI::Library
     ffi_lib DYLIB
