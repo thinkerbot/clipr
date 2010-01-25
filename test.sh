@@ -1,4 +1,4 @@
-git checkout origin/ffi-issue-26
+# in clipr, on the ffi-issue-26 branch
 rake compile
 
 # vs current version (2292e1d)
@@ -9,7 +9,7 @@ rake package
 gem uninstall ffi
 gem install pkg/ffi-0.6.0.gem
 cd ..
-ruby -Iffi/lib callback_registration_test.rb  # fails
+ruby -rubygems callback_registration_test.rb  # fails
 
 # vs last known pass (1cf7b8b)
 # teh next commit is 8cbc3f5, which changes the compile flags
@@ -19,4 +19,4 @@ rake package
 gem uninstall ffi
 gem install pkg/ffi-0.6.0.gem
 cd ..
-ruby -Iffi/lib callback_registration_test.rb  # passes on 10.5.8, fails on 10.6.2
+ruby -rubygems callback_registration_test.rb  # passes on 10.5.8, fails on 10.6.2
