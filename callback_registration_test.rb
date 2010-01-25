@@ -8,13 +8,13 @@ class CallbackRegistrationTest < Test::Unit::TestCase
     root = File.dirname(__FILE__)
     ffi_lib File.join(root, "src/clips.bundle")
 
-    callback :my_callback, [], :int
+    callback :callback, [], :int
     attach_function :InitializeEnvironment, [], :void 
-    attach_function :DefineFunction, [ :string, :char, :my_callback, :string ], :int
+    attach_function :DefineFunction, [ :string, :char, :callback, :string ], :int
   end
   
   def test_callback_registers_correctly
-    callback = lambda {}
+    callback = lambda { 100 }
     
     Clips.InitializeEnvironment
     assert_equal 1, Clips.DefineFunction("callback", ?d, callback, "Callback")
