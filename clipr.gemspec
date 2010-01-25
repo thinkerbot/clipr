@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.extensions << "src/extconf.rb"
   
   # add dependencies
-  s.add_dependency("ffi", "= 0.6.1")
+  s.add_dependency("ffi", "= 0.6.0")
   s.add_development_dependency("tap-test", ">= 0.4.0")
   
   s.has_rdoc = true
