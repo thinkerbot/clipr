@@ -1,7 +1,7 @@
 .DS_Store
 pkg
 rdoc
-vendor/gems
+.bundle
 src/*.o
 src/Makefile
 src/clips.bundle
