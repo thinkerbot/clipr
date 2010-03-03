@@ -25,6 +25,62 @@ Gem::Specification.new do |s|
   
   # list the files you want to include here.
   s.files = %W{
+    lib/clipr.rb
+    lib/clipr/api.rb
+    lib/clipr/api/agenda.rb
+    lib/clipr/api/data_object.rb
+    lib/clipr/api/debugging.rb
+    lib/clipr/api/defclass.rb
+    lib/clipr/api/deffacts.rb
+    lib/clipr/api/deffunction.rb
+    lib/clipr/api/defgeneric.rb
+    lib/clipr/api/defglobal.rb
+    lib/clipr/api/definstances.rb
+    lib/clipr/api/defmethod.rb
+    lib/clipr/api/defmodule.rb
+    lib/clipr/api/defrule.rb
+    lib/clipr/api/deftemplate.rb
+    lib/clipr/api/environment.rb
+    lib/clipr/api/fact.rb
+    lib/clipr/api/instance.rb
+    lib/clipr/api/io.rb
+    lib/clipr/api/memory.rb
+    lib/clipr/api/router.rb
+    lib/clipr/api/struct.rb
+    lib/clipr/api/struct/bit_map_hash_node.rb
+    lib/clipr/api/struct/external_address_hash_node.rb
+    lib/clipr/api/struct/field.rb
+    lib/clipr/api/struct/float_hash_node.rb
+    lib/clipr/api/struct/generic_hash_node.rb
+    lib/clipr/api/struct/integer_hash_node.rb
+    lib/clipr/api/struct/multifield.rb
+    lib/clipr/api/struct/symbol_hash_node.rb
+    lib/clipr/api/types.rb
+    lib/clipr/api_error.rb
+    lib/clipr/callback.rb
+    lib/clipr/constants.rb
+    lib/clipr/construct.rb
+    lib/clipr/defglobals.rb
+    lib/clipr/deftemplate.rb
+    lib/clipr/deftemplates.rb
+    lib/clipr/env.rb
+    lib/clipr/fact.rb
+    lib/clipr/fact/slot.rb
+    lib/clipr/facts.rb
+    lib/clipr/ordered_fact.rb
+    lib/clipr/router.rb
+    lib/clipr/router/exit_error.rb
+    lib/clipr/routers.rb
+    lib/clipr/rule.rb
+    lib/clipr/rule/action.rb
+    lib/clipr/rule/actions.rb
+    lib/clipr/rule/condition.rb
+    lib/clipr/rule/conditions.rb
+    lib/clipr/rule/constraint.rb
+    lib/clipr/rule/test.rb
+    lib/clipr/utils.rb
+    lib/generators/clips_api.rb
+    
     src/agenda.c
     src/agenda.h
     src/analysis.c
@@ -137,7 +193,6 @@ Gem::Specification.new do |s|
     src/exprnops.h
     src/exprnpsr.c
     src/exprnpsr.h
-    src/extconf.rb
     src/extnfunc.c
     src/extnfunc.h
     src/factbin.c
@@ -366,60 +421,5 @@ Gem::Specification.new do |s|
     src/utility.h
     src/watch.c
     src/watch.h
-
-    lib/clipr.rb
-    lib/clipr/api.rb
-    lib/clipr/api/agenda.rb
-    lib/clipr/api/data_object.rb
-    lib/clipr/api/data_object.rb.ffi
-    lib/clipr/api/debugging.rb
-    lib/clipr/api/defclass.rb
-    lib/clipr/api/deffacts.rb
-    lib/clipr/api/deffunction.rb
-    lib/clipr/api/defgeneric.rb
-    lib/clipr/api/defglobal.rb
-    lib/clipr/api/definstances.rb
-    lib/clipr/api/defmethod.rb
-    lib/clipr/api/defmodule.rb
-    lib/clipr/api/defrule.rb
-    lib/clipr/api/deftemplate.rb
-    lib/clipr/api/environment.rb
-    lib/clipr/api/fact.rb
-    lib/clipr/api/instance.rb
-    lib/clipr/api/io.rb
-    lib/clipr/api/memory.rb
-    lib/clipr/api/router.rb
-    lib/clipr/api/struct/bit_map_hash_node.rb
-    lib/clipr/api/struct/bit_map_hash_node.rb.ffi
-    lib/clipr/api/struct/external_address_hash_node.rb
-    lib/clipr/api/struct/external_address_hash_node.rb.ffi
-    lib/clipr/api/struct/float_hash_node.rb
-    lib/clipr/api/struct/float_hash_node.rb.ffi
-    lib/clipr/api/struct/generic_hash_node.rb
-    lib/clipr/api/struct/generic_hash_node.rb.ffi
-    lib/clipr/api/struct/integer_hash_node.rb
-    lib/clipr/api/struct/integer_hash_node.rb.ffi
-    lib/clipr/api/struct/symbol_hash_node.rb
-    lib/clipr/api/struct/symbol_hash_node.rb.ffi
-    lib/clipr/api_error.rb
-    lib/clipr/callback.rb
-    lib/clipr/constants.rb
-    lib/clipr/construct.rb
-    lib/clipr/defglobals.rb
-    lib/clipr/rule.rb
-    lib/clipr/rule/action.rb
-    lib/clipr/rule/actions.rb
-    lib/clipr/rule/condition.rb
-    lib/clipr/rule/conditions.rb
-    lib/clipr/rule/constraint.rb
-    lib/clipr/rule/test.rb
-    lib/clipr/fact.rb
-    lib/clipr/fact/slot.rb
-    lib/clipr/facts.rb
-    lib/clipr/env.rb
-    lib/clipr/facts.rb
-    lib/clipr/router.rb
-    lib/clipr/routers.rb
-    lib/clipr/utils.rb
   }
 end
