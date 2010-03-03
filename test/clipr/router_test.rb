@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + "/../test_helper"
-require "clipr/router"
+require "clipr/env"
 
 class RouterTest < Test::Unit::TestCase
   Router = Clipr::Router
