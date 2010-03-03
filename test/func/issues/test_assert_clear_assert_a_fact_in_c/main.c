@@ -1,3 +1,8 @@
+/* Prevent the inclusion of ruby headers via usrsetup.h */
+#ifndef RUBY_HEADERS
+#define RUBY_HEADERS 1
+#endif
+
 #include "clips.h"
 #include <stdio.h>
 
